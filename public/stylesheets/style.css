@@ -1,0 +1,137 @@
+.Header {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  height: 100px;
+  width: 51%;
+  background: rgba(255, 165, 0, 0.8);
+  padding: 10px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.BodyContainer {
+  margin-top: 110px;
+  padding: 10px 10px 0px 10px;
+}
+
+.LeftPanel {
+  z-index: 0;
+  position: absolute;
+  min-height: 100%;
+  width: 50%;
+  left: 12px;
+  border-right: 5px solid rgba(255, 165, 0, 0.8);
+  margin-top: 10px;
+  padding: 10px 20px 0px 10px;
+}
+
+.RightPanel {
+  position: fixed;
+  margin-left: 52%;
+  width: 48%;
+  min-height: 100%;
+  top: 120px;
+  padding: 0px 20px 0px 20px;
+}
+
+.Header input {
+  font-size: 14px;
+  border-radius: 10px;
+  border: 3px solid;
+  background: white;
+}
+
+input {
+  color: black;
+  font-size: 14px;
+  background: white;
+  padding: 0px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+#photo_form {
+  width: 35%;
+}
+
+#photo_form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+table {
+  color: black;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #e6e6e6;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+th {
+  padding: 3px;
+  border: 1px solid black;
+}
+
+td {
+  padding: 3px;
+  border-left: 1px solid black;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  padding: 10px;
+  border-style: groove;
+  border-width: 3px;
+  border-color: brown;
+  background-color: #eeeeee;
+}
+
+#add,
+#update {
+  border: 2px solid black;
+  padding: 10px;
+  background: gray;
+  cursor: pointer;
+  color: white;
+  border-radius: 20px;
+  font-weight: 900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#add:hover,
+#update:hover {
+  color: black;
+  background: white;
+}
+
+input[type='file'] {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

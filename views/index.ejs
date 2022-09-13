@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Language" content="ru">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Товары</title>
+  <link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <header class="Header">
+    <h1>Таблица товаров</h1>
+    <h2>Выберите действие</h2>
+    <form name="button_form" action="">
+      <input id="search" type="button" value="Поиск">
+      <input id="select_id" type="text" value="0">
+      <input id="select" type="button" value="Выбрать">
+      <input id="delete" type="button" value="Удалить">
+      <input id="new" type="button" value="Новая фотография">
+    </form>
+  </header>
+
+  <main class="BodyContainer">
+    <div class="LeftPanel" id="photo_list">
+    </div>
+    <div class="RightPanel" id="photo_div">
+      <p>Описание фотографии (id = <span id="ph_id">0</span>)</p>
+      <form id="photo_form" action="" enctype="multipart/form-data">
+        <label>Название товара<input placeholder="Название товара" autocomplete="off" type="text" name="name"
+            value="" /></label><br>
+        <label>Краткое описание товара<input placeholder="Краткое описание товара" autocomplete="off" type="text"
+            name="descr" /></label><br>
+        <label>Категория товара<input placeholder="Категория товара" autocomplete="off" type="text"
+            name="cat" /></label><br>
+        <label>Фотография товара<input placeholder="Фотография товара" autocomplete="off" type="text" name="file"
+            readonly /></label><br>
+        <input type="file" name="imagefile" alt="" accept="image/*" onchange="readImage(event)" /><br>
+        <img id="image" src="http://www.мойпраздник.рф/files/uploads/Article/57e0ee1513e97.jpg" alt="картинка" /><br>
+        <input id="add" type="button" value="Добавить">
+        <input id="update" type="button" value="Обновить">
+      </form>
+    </div>
+    <div>
+    </div>
+  </main>
+
+
+  <!-- Подключение библиотеки jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/javascripts/ajax.js"></script>
+  <script src="/javascripts/readimage.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#delete').on('click', function (e) {
+        e.preventDefault();
+        $('#search').click();
+      })
+
+      $('#add').on('click', function (e) {
+        e.preventDefault();
+        setTimeout(() => {
+          $('#search').click();
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+
+</html>
